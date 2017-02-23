@@ -18,4 +18,3 @@ service apache2 reload
 
 echo "[******] Starts Apache using Foreground Mode";
 apache2ctl -D FOREGROUND
-#exec apache2 -DFOREGROUND
