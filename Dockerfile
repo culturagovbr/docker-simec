@@ -14,11 +14,14 @@ RUN apt-get install -y libjpeg62-turbo-dev
 RUN apt-get install -y libcurl4-gnutls-dev
 RUN apt-get install -y libxml2-dev
 RUN apt-get install -y freetds-dev
+RUN apt-get install -y libghc-postgresql-libpq-dev
+RUN apt-get install -y libpq-dev
 
 RUN echo "[ ***** ***** ***** ] - Installing PHP Dependencies ***** ***** ***** "
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install soap
+RUN docker-php-ext-configure pgsql --with-pgsql=/usr/include/postgresql/
 RUN docker-php-ext-install pgsql
 RUN docker-php-ext-install pdo_pgsql
 
