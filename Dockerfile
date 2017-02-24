@@ -19,7 +19,8 @@ RUN echo "[ ***** ***** ***** ] - Installing PHP Dependencies ***** ***** ***** 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install soap
-
+RUN docker-php-ext-install pgsql
+RUN docker-php-ext-install pdo_pgsql
 
 RUN chmod +x -R /tmp/src/
 
