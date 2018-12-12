@@ -1,6 +1,6 @@
 # docker-simec
 
-Repo used to have a recipe(Dockerfile) to create a image used by SIMINC2
+Repo used to have a recipe(Dockerfile) to create a image used by SIMEC
 
 ### Prerequisites
 * Docker - More information [here](http://pt.slideshare.net/vinnyfs89/docker-essa-baleia-vai-te-conquistar?qid=aed7b752-f313-4515-badd-f3bf811c8a35&v=&b=&from_search=1).
@@ -9,7 +9,6 @@ Repo used to have a recipe(Dockerfile) to create a image used by SIMINC2
 * Build image
 * Create a container from image created
 * Run Container
-* Modify './global/database.php' your database connection configuration
 
 ### Folder structure to create container
 ```
