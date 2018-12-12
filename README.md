@@ -23,14 +23,14 @@ Repo used to have a recipe(Dockerfile) to create a image used by SIMINC2
 * Enter inside this cloned repository;
 * Execute the commando below to create a new image.
 ```
-docker build -t simec:1.1 .
+docker build -t culturagovbr/simec:1.1 .
 ```
 
-This code `-t simec:1.1` means you will create a image named 'simec' and tag '1.1' and the `.` means your build will use the same folder.
+This code `-t culturagovbr/simec:1.1` means you will create a image named 'simec' and tag '1.1' and the `.` means your build will use the same folder.
 
 You can execute the command below to create a new container using this new image created. Note: `$(pwd)` means your current directory. You can also change it, if you want.
 ```
-docker run -it -v $(pwd):/var/www --name simec -e APPLICATION_ENV="development" -p 8083:80 -p 9003:9000 culturagovbr/simec:1.1
+docker run -it -v $(pwd):/var/www --name simec-web -e APPLICATION_ENV="development" -p 8083:80 -p 9003:9000 culturagovbr/simec:1.1
 ```
 
 Or You you can also execute the same command above, but arranging using docker-compose:
@@ -42,7 +42,7 @@ Or You you can also execute the same command above, but arranging using docker-c
 
 If you wanna check something inside your container you can access using the command below:
 ```
-docker exec -it simec bash
+docker exec -it simec-web bash
 ```
 
 More information [here](https://hub.docker.com/r/culturagovbr/simec)
